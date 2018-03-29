@@ -1,0 +1,48 @@
+from datetime import datetime
+import random
+import sys
+import time 
+
+twoje_liczby = list()
+liczby = list()
+wylosowane_liczby = list()
+print("---- Podaj swoje 6 liczb z przedziału 1-49 :) ----- ")
+for i in range(0,6):
+    print("Podaj liczbe nr", i + 1, ": ")
+    twoje_liczby.append(input())
+    #print("\n")
+licznik = 0
+
+print("\n")
+print("Twoje liczby:")
+print(sorted(twoje_liczby))
+print("---Losowanie ! Wcisnij enter when you are ready ! ---" ) 
+y = input() # enter uruchamiający losowanie
+
+x = random.randint(1,49)
+wylosowane_liczby.append(x)
+print("Liczba  1 :",x)
+time.sleep(10)
+k = 2
+for i in range(0,5):
+    x = random.randint(0,49)
+    if x in wylosowane_liczby:
+        while(x in liczby):
+             x = random.randint(1,49)
+             wylosowane_liczby.append(x)
+    else: 
+        wylosowane_liczby.append(x)
+    print("Liczba ",k, ":", x )
+    time.sleep(3)
+    k = k +1
+    
+
+print("Wylosowane liczby:")
+print(sorted(wylosowane_liczby))
+for i in range(0,6):
+    if wylosowane_liczby.pop(0) in twoje_liczby :
+        licznik = licznik + 1 
+
+print("Trafione: " ,licznik)
+
+
