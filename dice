@@ -1,0 +1,11 @@
+from random import randint
+
+print("Do you want to play a game ?")
+print("Press enter to roll dice or q to quit the game : ")
+print("press keep enter to rolling the dice: :) ")
+age = input()
+
+while(age==""):
+    print(randint(1,6))
+    age = input()
+print("not pressed enter")
