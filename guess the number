@@ -1,0 +1,15 @@
+from random import randint
+
+print("guess the number 1 - 10  ")
+
+age = input()
+losowana = (randint(1,10))
+print("losowana",losowana)
+
+a = int(age)
+b = int(losowana)
+while a != b:
+    print("age", age,"losowana :",losowana)
+    age = input()
+    a = int(age)
+print("sukces ! ")
