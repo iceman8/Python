@@ -3,7 +3,16 @@ from math import pi
 def is_number(s):
     while s.isdigit() == False:
         s = input("only nums, input again\n")
-    return int(s)
+    s = int(s)
+    if s <= 50:
+        return s
+    while True:
+        try:
+            s = int(input("Enter num max 50: "))
+        except ValueError:
+            print("Not a number")
+        if s <= 50:
+            return s
 
 def zero(parametr):
     return pi
@@ -15,19 +24,18 @@ pi = 3
 pi = str(pi)
 
 
-liczba = input('podaj liczbe po przecinku przedzial 0 - 50 : ')
+liczba = input('podaj liczbe po przecinku przedzial 0 - 50 :')
 Lista = ['1','4','1','5','9','2','6','5','3','5','8','9','7','9','3','2','3','8','4','6','2','6','4','3','3','8','3','2','7','9','5','0','2','8','8','4','1','9','7','1','6','9','3','9','9','3','7','5','1','0']
 
-is_number(liczba)
-liczba = int(liczba)
+x = is_number(liczba)
 
-if(liczba == 0):
+if(x == 0):
     print(zero(liczba))
-elif (liczba == 50 ):
+elif (x == 50 ):
     print(allNums(liczba))
 else:
     zmienna = 0
-    k = int(Lista[liczba])
+    k = int(Lista[x])
     if k == 0:
         zmienna = 0
     elif k == 1:
@@ -50,26 +58,12 @@ else:
         zmienna = 1
 
 
-    zaokraglanie = Lista[liczba - 1]
+    zaokraglanie = Lista[x - 1]
     zaokraglanie = int(zaokraglanie)
     zaokraglanie = zaokraglanie + zmienna
     zaokraglanie = str(zaokraglanie)
 
-    polaczenie = "".join(Lista[:liczba-1])
+    polaczenie = "".join(Lista[:x-1])
     print(pi + ',' + polaczenie + zaokraglanie)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
