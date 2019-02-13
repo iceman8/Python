@@ -1,0 +1,30 @@
+                                    
+                                    
+                                    
+                                    
+list = []                           
+                                    
+                                    
+x = int(input(""))                  
+                                    
+                                    
+dzielnik = 2                        
+                                    
+                                    
+while x > 1:                        
+    if (x % dzielnik) == 0:         
+        x = x / dzielnik            
+        list.append(dzielnik)       
+        print(list)                 
+    else:                           
+        dzielnik = dzielnik + 1     
+                                    
+                                    
+sum = 1                             
+                                    
+for element in list:                
+    sum*=element                    
+print(sum)                          
+                                    
+                                    
+                                    
