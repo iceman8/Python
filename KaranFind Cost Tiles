@@ -1,0 +1,20 @@
+
+print("what is the unit of lenght: ")
+Unit = input()
+
+print('input width in ' + Unit + ' ?')
+width = input()
+
+print("input height : ")
+height = input()
+
+
+
+print("what is the cost of one unit")
+cost = input()
+
+total = float(width) * float(height) * float(cost)
+
+print('Total Cost: ' + str(total))
+
+
